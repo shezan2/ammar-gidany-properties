@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm --version)",
+      "Read(//Users/salman/**)",
+      "Read(//Users/salman/.nvm/versions/**)",
+      "Bash([ -s \"$HOME/.nvm/nvm.sh\" ])",
+      "WebSearch",
+      "mcp__claude-in-chrome__navigate",
+      "mcp__claude-in-chrome__tabs_context_mcp",
+      "WebFetch(domain:el-loco-olive.vercel.app)",
+      "Read(//var/folders/3k/bh489t6j5tbgbh2pjkt79_8r0000gn/T/TemporaryItems/NSIRD_screencaptureui_6o8lod/**)",
+      "Bash(echo \"---\")",
+      "Bash(which ffmpeg *)",
+      "Bash(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 '/var/folders/3k/bh489t6j5tbgbh2pjkt79_8r0000gn/T/TemporaryItems/NSIRD_screencaptureui_6o8lod/Screen Recording 2026-07-09 at 7.37.11 AM.mov')",
+      "Bash(mdfind -name \"Screen Recording 2026-07-09\")"
+    ]
+  }
+}
