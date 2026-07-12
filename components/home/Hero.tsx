@@ -93,7 +93,7 @@ export default function Hero() {
           Ammar Gidany · Districts 4 · 9 · 10 · 15
         </p>
 
-        <h1 className="font-display text-[clamp(2.9rem,9vw,6.8rem)] font-medium leading-[1.02] tracking-tight text-cream">
+        <h1 className="w-full font-display text-[clamp(2.9rem,9vw,6.8rem)] font-medium leading-[1.05] tracking-tight text-cream">
           <Line text={HEADLINE_1} />
           <Line text={HEADLINE_2} italic />
           <Line text={HEADLINE_3} />
