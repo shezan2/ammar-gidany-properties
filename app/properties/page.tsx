@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
-import PropertyShowcase from "@/components/PropertyShowcase";
+import PropertyCard from "@/components/PropertyCard";
 import MapLoader from "@/components/MapLoader";
 import AlertsSignup from "@/components/AlertsSignup";
 import { properties, formatPriceShort } from "@/lib/properties";
@@ -37,7 +37,13 @@ export default function PropertiesPage() {
         className="mb-16"
       />
 
-      <PropertyShowcase properties={[...properties]} />
+      <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+        {properties.map((p, i) => (
+          <Reveal key={p.slug} delay={(i % 3) * 0.1}>
+            <PropertyCard property={p} priority={i === 0} />
+          </Reveal>
+        ))}
+      </div>
 
       <div className="mt-24">
         <SectionHeading
@@ -61,7 +67,7 @@ export default function PropertiesPage() {
       </div>
 
       <Reveal className="mt-24">
-        <div className="glass flex flex-col items-start justify-between gap-6 rounded-[2px] p-8 sm:p-10 lg:flex-row lg:items-center">
+        <div className="glass flex flex-col items-start justify-between gap-6 rounded-2xl p-8 sm:p-10 lg:flex-row lg:items-center">
           <div>
             <p className="eyebrow mb-3">Off-Market Access</p>
             <h2 className="font-display text-3xl text-cream sm:text-4xl">

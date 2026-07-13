@@ -69,7 +69,7 @@ export default async function NeighbourhoodPage({ params }: PageProps) {
 
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         {/* Stats */}
-        <section className="grid grid-cols-2 gap-px overflow-hidden rounded-[2px] border border-line bg-line lg:grid-cols-4 -mt-0 my-14 sm:my-16">
+        <section className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-line bg-line lg:grid-cols-4 -mt-0 my-14 sm:my-16">
           {n.stats.map((s) => (
             <div key={s.label} className="bg-canvas-raised p-6">
               <p className="text-[0.6rem] uppercase tracking-[0.25em] text-ink-faint">{s.label}</p>
@@ -98,7 +98,7 @@ export default async function NeighbourhoodPage({ params }: PageProps) {
         <section className="grid gap-6 pb-16 md:grid-cols-3">
           {columns.map((col, i) => (
             <Reveal key={col.key} delay={i * 0.1}>
-              <div className="glass h-full rounded-[2px] p-7">
+              <div className="glass h-full rounded-2xl p-7">
                 <h2 className="eyebrow mb-6">{col.label}</h2>
                 <ul className="space-y-5">
                   {n[col.key].map((item) => (
@@ -115,7 +115,7 @@ export default async function NeighbourhoodPage({ params }: PageProps) {
 
         {/* Market note */}
         <Reveal className="pb-16">
-          <div className="rounded-[2px] border border-gold/25 bg-gold/[0.05] p-8 sm:p-10">
+          <div className="rounded-2xl border border-gold/25 bg-gold/[0.05] p-8 sm:p-10">
             <p className="eyebrow mb-4">Ammar&apos;s Market Read</p>
             <p className="max-w-3xl font-display text-xl leading-relaxed text-cream sm:text-2xl">
               {n.marketNote}
@@ -190,7 +190,7 @@ export default async function NeighbourhoodPage({ params }: PageProps) {
               <Link
                 key={o.slug}
                 href={`/neighbourhoods/${o.slug}`}
-                className="group rounded-[2px] border border-line bg-canvas-raised p-5 transition-colors duration-300 hover:border-gold/40"
+                className="group rounded-xl border border-line bg-canvas-raised p-5 transition-colors duration-300 hover:border-gold/40"
               >
                 <p className="text-[0.6rem] uppercase tracking-[0.25em] text-ink-faint">
                   Next Guide

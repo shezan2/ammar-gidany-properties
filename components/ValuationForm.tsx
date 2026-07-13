@@ -91,7 +91,7 @@ export default function ValuationForm() {
 
   if (state === "sent") {
     return (
-      <div className="glass rounded-[2px] p-8 text-center sm:p-12">
+      <div className="glass rounded-2xl p-8 text-center sm:p-12">
         <span className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full border border-gold/50 bg-gold/10">
           <svg viewBox="0 0 24 24" className="h-7 w-7 fill-none stroke-gold" strokeWidth="1.8" aria-hidden>
             <path d="M4 12.5l5 5L20 6.5" />
@@ -122,7 +122,7 @@ export default function ValuationForm() {
   }
 
   return (
-    <form onSubmit={onSubmit} className="glass rounded-[2px] p-6 sm:p-10">
+    <form onSubmit={onSubmit} className="glass rounded-2xl p-6 sm:p-10">
       {/* Progress */}
       <div className="mb-9">
         <div className="flex justify-between">
@@ -196,7 +196,7 @@ export default function ValuationForm() {
                       key={t}
                       type="button"
                       onClick={() => pick("type", t)}
-                      className={`rounded-[2px] border px-3 py-3 text-xs transition-all duration-300 ${
+                      className={`rounded-lg border px-3 py-3 text-xs transition-all duration-300 ${
                         form.type === t
                           ? "border-gold bg-gold/10 text-gold"
                           : "border-line bg-canvas-raised text-ink-dim hover:border-line-strong hover:text-cream"
@@ -250,7 +250,7 @@ export default function ValuationForm() {
                       key={c}
                       type="button"
                       onClick={() => pick("condition", c)}
-                      className={`rounded-[2px] border px-3 py-3 text-xs transition-all duration-300 ${
+                      className={`rounded-lg border px-3 py-3 text-xs transition-all duration-300 ${
                         form.condition === c
                           ? "border-gold bg-gold/10 text-gold"
                           : "border-line bg-canvas-raised text-ink-dim hover:border-line-strong hover:text-cream"
@@ -273,7 +273,7 @@ export default function ValuationForm() {
                     key={t}
                     type="button"
                     onClick={() => pick("timeline", t)}
-                    className={`rounded-[2px] border p-5 text-left text-sm transition-all duration-300 ${
+                    className={`rounded-xl border p-5 text-left text-sm transition-all duration-300 ${
                       form.timeline === t
                         ? "border-gold bg-gold/10 text-gold"
                         : "border-line bg-canvas-raised text-ink-dim hover:border-line-strong hover:text-cream"

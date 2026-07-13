@@ -233,7 +233,7 @@ export default async function PropertyDetailPage({ params }: PageProps) {
               <MortgageQuickCalc price={p.price} />
             </Reveal>
             <Reveal delay={0.15}>
-              <div className="glass rounded-[2px] p-6 sm:p-8" id="enquire">
+              <div className="glass rounded-2xl p-6 sm:p-8" id="enquire">
                 <p className="eyebrow mb-1.5">Private Viewing</p>
                 <p className="mb-6 text-sm leading-relaxed text-ink-dim">
                   Viewings are by appointment and always accompanied by Ammar personally.

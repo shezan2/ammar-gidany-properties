@@ -28,7 +28,7 @@ export default function EnquiryForm({ subject, defaultMessage = "" }: EnquiryFor
 
   if (state === "sent") {
     return (
-      <div className="rounded-[2px] border border-gold/30 bg-gold/[0.06] p-8 text-center">
+      <div className="rounded-2xl border border-gold/30 bg-gold/[0.06] p-8 text-center">
         <p className="font-display text-2xl text-gold">Thank you.</p>
         <p className="mt-2 text-sm leading-relaxed text-ink-dim">
           Your enquiry is with Ammar directly — expect a personal reply within the hour during

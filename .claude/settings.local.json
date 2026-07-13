@@ -13,7 +13,11 @@
       "Bash(echo \"---\")",
       "Bash(which ffmpeg *)",
       "Bash(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 '/var/folders/3k/bh489t6j5tbgbh2pjkt79_8r0000gn/T/TemporaryItems/NSIRD_screencaptureui_6o8lod/Screen Recording 2026-07-09 at 7.37.11 AM.mov')",
-      "Bash(mdfind -name \"Screen Recording 2026-07-09\")"
+      "Bash(mdfind -name \"Screen Recording 2026-07-09\")",
+      "Bash(npm run *)",
+      "Bash(git add *)",
+      "Bash(git commit -m 'Revert editorial layout and sharp corners; keep typography and local images *)",
+      "Bash(git push *)"
     ]
   }
 }

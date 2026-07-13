@@ -72,7 +72,7 @@ export default function PropertyMap({
   scrollWheelZoom = false,
 }: PropertyMapProps) {
   return (
-    <div className={`relative z-0 w-full overflow-hidden rounded-[2px] border border-line ${className}`}>
+    <div className={`relative z-0 w-full overflow-hidden rounded-2xl border border-line ${className}`}>
       <MapContainer
         center={center}
         zoom={zoom}

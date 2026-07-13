@@ -115,7 +115,7 @@ export default function AboutPage() {
 
           <Reveal delay={0.2} className="lg:pt-10">
             <div className="relative">
-              <div className="relative aspect-[4/5] overflow-hidden rounded-[2px] border border-line">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-line">
                 <Image
                   src="/images/photo-1560250097-0b93528c311a.jpg"
                   alt="Portrait of Ammar Gidany"
@@ -126,7 +126,7 @@ export default function AboutPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-canvas/60 via-transparent to-transparent" />
               </div>
-              <div className="glass absolute -bottom-6 left-6 right-6 rounded-[2px] p-5 sm:left-10 sm:right-auto sm:max-w-xs">
+              <div className="glass absolute -bottom-6 left-6 right-6 rounded-xl p-5 sm:left-10 sm:right-auto sm:max-w-xs">
                 <p className="font-display text-xl text-cream">Ammar Gidany</p>
                 <p className="mt-1 text-xs leading-relaxed text-ink-dim">
                   {site.ceaReg}
@@ -151,7 +151,7 @@ export default function AboutPage() {
           <div className="grid gap-6 md:grid-cols-3">
             {pillars.map((p, i) => (
               <Reveal key={p.title} delay={i * 0.12}>
-                <div className="glass h-full rounded-[2px] p-8">
+                <div className="glass h-full rounded-2xl p-8">
                   <span className="font-display text-5xl text-gold/40">0{i + 1}</span>
                   <h3 className="mt-4 font-display text-2xl text-cream">{p.title}</h3>
                   <p className="mt-3 text-sm leading-relaxed text-ink-dim">{p.body}</p>

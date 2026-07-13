@@ -29,7 +29,7 @@ export default function LazyEmbed({
   const [loaded, setLoaded] = useState(false);
 
   return (
-    <div className={`relative w-full overflow-hidden rounded-[2px] border border-line bg-surface ${aspect}`}>
+    <div className={`relative w-full overflow-hidden rounded-2xl border border-line bg-surface ${aspect}`}>
       {loaded ? (
         <iframe
           src={src}

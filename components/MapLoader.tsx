@@ -7,7 +7,7 @@ import type { MapMarker } from "./PropertyMap";
 const PropertyMap = dynamic(() => import("./PropertyMap"), {
   ssr: false,
   loading: () => (
-    <div className="flex h-[480px] w-full items-center justify-center rounded-[2px] border border-line bg-surface">
+    <div className="flex h-[480px] w-full items-center justify-center rounded-2xl border border-line bg-surface">
       <span className="eyebrow animate-pulse-soft">Loading map…</span>
     </div>
   ),

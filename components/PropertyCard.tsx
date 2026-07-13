@@ -11,9 +11,9 @@ interface PropertyCardProps {
 
 export default function PropertyCard({ property: p, priority = false }: PropertyCardProps) {
   return (
-    <SpotlightCard className="rounded-[2px] border border-line bg-surface transition-colors duration-500 hover:border-gold/30">
+    <SpotlightCard className="rounded-2xl border border-line bg-surface transition-colors duration-500 hover:border-gold/30">
       <Link href={`/properties/${p.slug}`} className="block">
-        <div className="relative aspect-[4/3] overflow-hidden rounded-t-[2px]">
+        <div className="relative aspect-[4/3] overflow-hidden rounded-t-2xl">
           <Image
             src={p.hero.src}
             alt={p.hero.alt}

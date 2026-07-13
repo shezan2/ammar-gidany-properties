@@ -68,7 +68,7 @@ export default function ContactPage() {
             <a
               href={c.href}
               {...(c.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-              className="glass group flex h-full items-center gap-4 rounded-[2px] p-6 transition-colors duration-300 hover:border-gold/50"
+              className="glass group flex h-full items-center gap-4 rounded-2xl p-6 transition-colors duration-300 hover:border-gold/50"
             >
               <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-gold/40 text-gold transition-colors duration-300 group-hover:bg-gold group-hover:text-canvas">
                 {c.icon}

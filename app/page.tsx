@@ -7,7 +7,7 @@ import Marquee from "@/components/ui/Marquee";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
 import MagneticButton from "@/components/ui/MagneticButton";
-import PropertyShowcase from "@/components/PropertyShowcase";
+import PropertyCard from "@/components/PropertyCard";
 import { properties, recentlySold, testimonials, formatPriceShort } from "@/lib/properties";
 import { neighbourhoods } from "@/lib/neighbourhoods";
 import { stats } from "@/lib/site";
@@ -58,7 +58,13 @@ export default function HomePage() {
             </Button>
           </Reveal>
         </div>
-        <PropertyShowcase properties={[...properties]} />
+        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+          {properties.map((p, i) => (
+            <Reveal key={p.slug} delay={i * 0.12}>
+              <PropertyCard property={p} priority={i === 0} />
+            </Reveal>
+          ))}
+        </div>
       </section>
 
       {/* Recently sold */}
@@ -77,7 +83,7 @@ export default function HomePage() {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {recentlySold.map((s, i) => (
               <Reveal key={s.name} delay={(i % 3) * 0.1}>
-                <div className="group relative aspect-[4/3] overflow-hidden rounded-[2px] border border-line">
+                <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-line">
                   <Image
                     src={s.image.src}
                     alt={s.image.alt}
@@ -132,7 +138,7 @@ export default function HomePage() {
           {testimonials.map((t) => (
             <figure
               key={t.name}
-              className="w-[340px] shrink-0 rounded-[2px] border border-line bg-surface p-7 sm:w-[420px]"
+              className="w-[340px] shrink-0 rounded-2xl border border-line bg-surface p-7 sm:w-[420px]"
             >
               <svg viewBox="0 0 24 24" className="mb-4 h-6 w-6 fill-gold/60" aria-hidden>
                 <path d="M9.6 4C5.9 6.1 3.5 9.6 3.5 13.7c0 3.4 2 6.3 5.1 6.3 2.4 0 4.2-1.9 4.2-4.2 0-2.2-1.6-3.9-3.7-3.9-.4 0-.9.1-1 .1.3-2.3 2.4-5 4.6-6.2L9.6 4zm10.7 0c-3.7 2.1-6.1 5.6-6.1 9.7 0 3.4 2 6.3 5.1 6.3 2.4 0 4.2-1.9 4.2-4.2 0-2.2-1.6-3.9-3.7-3.9-.4 0-.9.1-1 .1.3-2.3 2.4-5 4.6-6.2L20.3 4z" />
@@ -180,7 +186,7 @@ export default function HomePage() {
               <Reveal key={n.slug} delay={i * 0.1}>
                 <Link
                   href={`/neighbourhoods/${n.slug}`}
-                  className="group relative block aspect-[3/4] overflow-hidden rounded-[2px] border border-line sm:aspect-[4/5]"
+                  className="group relative block aspect-[3/4] overflow-hidden rounded-2xl border border-line sm:aspect-[4/5]"
                 >
                   <Image
                     src={n.hero.src}
