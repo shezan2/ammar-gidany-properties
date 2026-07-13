@@ -61,9 +61,11 @@ function Slider({
 
 function ResultCard({ label, value, sub }: { label: string; value: string; sub?: string }) {
   return (
-    <div className="rounded-xl border border-gold/25 bg-gold/[0.06] p-5">
+    <div className="rounded-[2px] border border-gold/25 bg-gold/[0.06] p-5">
       <p className="text-[0.6rem] uppercase tracking-[0.25em] text-ink-dim">{label}</p>
-      <p className="mt-1.5 font-display text-3xl text-gold sm:text-4xl">{value}</p>
+      <p className="mt-1.5 font-sans text-2xl font-light tracking-tight text-gold sm:text-3xl">
+        {value}
+      </p>
       {sub && <p className="mt-2 text-xs leading-relaxed text-ink-faint">{sub}</p>}
     </div>
   );
@@ -113,7 +115,7 @@ function MortgagePanel() {
 
       <div>
         <p className={labelCls}>Outstanding balance over the tenure</p>
-        <div className="rounded-2xl border border-line bg-canvas-raised p-5 sm:p-7">
+        <div className="rounded-[2px] border border-line bg-canvas-raised p-5 sm:p-7">
           <div className="flex h-56 items-end gap-[3px] sm:h-72">
             {r.schedule.map((row) => (
               <div
@@ -212,7 +214,7 @@ function AffordabilityPanel() {
           <ResultCard label="Maximum Loan" value={sgd(r.maxLoan)} />
           <ResultCard label="Max Monthly Payment" value={sgd(r.maxMonthlyPayment)} />
         </div>
-        <div className="rounded-xl border border-line bg-canvas-raised p-5 text-xs leading-relaxed text-ink-dim">
+        <div className="rounded-[2px] border border-line bg-canvas-raised p-5 text-xs leading-relaxed text-ink-dim">
           <p className="mb-2 text-[0.62rem] uppercase tracking-[0.22em] text-gold">
             How this is computed
           </p>
@@ -269,7 +271,7 @@ function StampDutyPanel() {
                 key={p.id}
                 type="button"
                 onClick={() => setProfile(p.id)}
-                className={`rounded-lg border px-3 py-3 text-xs transition-all duration-300 ${
+                className={`rounded-[2px] border px-3 py-3 text-xs transition-all duration-300 ${
                   profile === p.id
                     ? "border-gold bg-gold/10 text-gold"
                     : "border-line bg-canvas-raised text-ink-dim hover:border-line-strong hover:text-cream"
@@ -288,7 +290,7 @@ function StampDutyPanel() {
                 key={n}
                 type="button"
                 onClick={() => setCount(n)}
-                className={`rounded-lg border px-3 py-3 text-xs transition-all duration-300 ${
+                className={`rounded-[2px] border px-3 py-3 text-xs transition-all duration-300 ${
                   count === n
                     ? "border-gold bg-gold/10 text-gold"
                     : "border-line bg-canvas-raised text-ink-dim hover:border-line-strong hover:text-cream"
@@ -315,7 +317,7 @@ function StampDutyPanel() {
             sub={`${(rate * 100).toFixed(0)}% for this profile`}
           />
         </div>
-        <div className="rounded-xl border border-line bg-canvas-raised p-5 text-xs leading-relaxed text-ink-dim">
+        <div className="rounded-[2px] border border-line bg-canvas-raised p-5 text-xs leading-relaxed text-ink-dim">
           <p className="mb-2 text-[0.62rem] uppercase tracking-[0.22em] text-gold">Current rates</p>
           BSD (residential, from 15 Feb 2023): 1% on the first S$180K, 2% on the next S$180K, 3%
           to S$1M, 4% to S$1.5M, 5% to S$3M, 6% above. ABSD (from 27 Apr 2023): citizens 0/20/30%,

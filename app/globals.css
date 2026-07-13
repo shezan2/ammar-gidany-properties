@@ -202,7 +202,7 @@ body {
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
 }
 .leaflet-popup-content-wrapper {
-  border-radius: 10px;
+  border-radius: 2px;
 }
 .leaflet-container a.leaflet-popup-close-button {
   color: var(--ink-dim);

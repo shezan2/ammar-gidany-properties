@@ -32,7 +32,7 @@ export default function NeighbourhoodsPage() {
           <Reveal key={n.slug} delay={(i % 2) * 0.1}>
             <Link
               href={`/neighbourhoods/${n.slug}`}
-              className={`group relative block overflow-hidden rounded-2xl border border-line ${
+              className={`group relative block overflow-hidden rounded-[2px] border border-line ${
                 i === 0 ? "aspect-[16/10] md:col-span-2 md:aspect-[21/9]" : "aspect-[16/11]"
               }`}
             >

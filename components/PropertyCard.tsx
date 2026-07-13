@@ -11,9 +11,9 @@ interface PropertyCardProps {
 
 export default function PropertyCard({ property: p, priority = false }: PropertyCardProps) {
   return (
-    <SpotlightCard className="rounded-2xl border border-line bg-surface transition-colors duration-500 hover:border-gold/30">
+    <SpotlightCard className="rounded-[2px] border border-line bg-surface transition-colors duration-500 hover:border-gold/30">
       <Link href={`/properties/${p.slug}`} className="block">
-        <div className="relative aspect-[4/3] overflow-hidden rounded-t-2xl">
+        <div className="relative aspect-[4/3] overflow-hidden rounded-t-[2px]">
           <Image
             src={p.hero.src}
             alt={p.hero.alt}
@@ -41,7 +41,9 @@ export default function PropertyCard({ property: p, priority = false }: Property
           <div className="flex items-end justify-between gap-4">
             <div>
               <p className="text-[0.6rem] uppercase tracking-[0.25em] text-ink-faint">Guide Price</p>
-              <p className="mt-1 font-display text-2xl text-gold">{formatPrice(p.price)}</p>
+              <p className="mt-1 font-sans text-xl font-light tracking-[0.04em] text-gold">
+                {formatPrice(p.price)}
+              </p>
             </div>
             <p className="text-xs text-ink-faint">{p.tenure}</p>
           </div>

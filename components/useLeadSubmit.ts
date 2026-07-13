@@ -38,6 +38,6 @@ export function useLeadSubmit() {
 }
 
 export const inputCls =
-  "w-full rounded-lg border border-line bg-canvas-raised px-4 py-3.5 text-sm text-cream placeholder:text-ink-faint outline-none transition-colors duration-300 focus:border-gold/60 focus:bg-surface";
+  "w-full rounded-[2px] border border-line bg-canvas-raised px-4 py-3.5 text-sm text-cream placeholder:text-ink-faint outline-none transition-colors duration-300 focus:border-gold/60 focus:bg-surface";
 
 export const labelCls = "mb-2 block text-[0.65rem] uppercase tracking-[0.22em] text-ink-dim";

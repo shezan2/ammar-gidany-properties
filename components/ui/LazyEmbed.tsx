@@ -29,7 +29,7 @@ export default function LazyEmbed({
   const [loaded, setLoaded] = useState(false);
 
   return (
-    <div className={`relative w-full overflow-hidden rounded-2xl border border-line bg-surface ${aspect}`}>
+    <div className={`relative w-full overflow-hidden rounded-[2px] border border-line bg-surface ${aspect}`}>
       {loaded ? (
         <iframe
           src={src}
@@ -49,7 +49,7 @@ export default function LazyEmbed({
             src={poster}
             alt={posterAlt}
             fill
-            sizes="(max-width: 1024px) 100vw, 900px"
+            sizes="(max-width: 1024px) 100vw, 820px"
             className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
           />
           <span className="absolute inset-0 bg-gradient-to-t from-canvas/80 via-canvas/20 to-transparent" />

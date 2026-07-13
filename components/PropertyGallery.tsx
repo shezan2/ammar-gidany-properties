@@ -44,7 +44,7 @@ export default function PropertyGallery({ images, name }: PropertyGalleryProps) 
             key={img.src}
             type="button"
             onClick={() => setIndex(i)}
-            className={`group relative overflow-hidden rounded-xl border border-line focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold ${
+            className={`group relative overflow-hidden rounded-[2px] border border-line focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold ${
               i === 0 ? "col-span-2 aspect-[16/10] sm:row-span-2 sm:aspect-auto" : "aspect-[4/3]"
             }`}
             aria-label={`Open photo ${i + 1} of ${images.length}: ${img.alt}`}

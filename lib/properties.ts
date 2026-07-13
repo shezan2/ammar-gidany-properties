@@ -46,8 +46,8 @@ export interface Property {
   amenities: Amenity[];
 }
 
-const u = (id: string, w = 1800) =>
-  `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=80`;
+// Local, size-capped assets in /public/images (downloaded once; no remote fetches).
+const u = (id: string, _w = 0) => `/images/${id}.jpg`;
 
 export const properties: Property[] = [
   {

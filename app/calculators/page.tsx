@@ -31,7 +31,7 @@ export default function CalculatorsPage() {
       </Reveal>
 
       <Reveal className="mt-20">
-        <div className="glass flex flex-col items-start justify-between gap-6 rounded-2xl p-8 sm:flex-row sm:items-center sm:p-10">
+        <div className="glass flex flex-col items-start justify-between gap-6 rounded-[2px] p-8 sm:flex-row sm:items-center sm:p-10">
           <div>
             <h2 className="font-display text-2xl text-cream sm:text-3xl">
               Want these numbers <span className="italic text-gold-bright">stress-tested?</span>

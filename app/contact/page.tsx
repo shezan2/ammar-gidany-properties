@@ -68,7 +68,7 @@ export default function ContactPage() {
             <a
               href={c.href}
               {...(c.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-              className="glass group flex h-full items-center gap-4 rounded-2xl p-6 transition-colors duration-300 hover:border-gold/50"
+              className="glass group flex h-full items-center gap-4 rounded-[2px] p-6 transition-colors duration-300 hover:border-gold/50"
             >
               <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-gold/40 text-gold transition-colors duration-300 group-hover:bg-gold group-hover:text-canvas">
                 {c.icon}
@@ -105,7 +105,7 @@ export default function ContactPage() {
             <LazyEmbed
               src={site.calendlyUrl}
               title="Schedule a private consultation with Ammar"
-              poster="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=80"
+              poster="/images/photo-1497366754035-f200968a6e72.jpg"
               posterAlt="A calm, well-appointed meeting room"
               badge="Calendar"
               aspect="aspect-[4/5] sm:aspect-[4/4.4]"

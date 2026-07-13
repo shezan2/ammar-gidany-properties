@@ -20,7 +20,7 @@ export default function MortgageQuickCalc({ price }: MortgageQuickCalcProps) {
   const fill = (v: number, min: number, max: number) => ((v - min) / (max - min)) * 100;
 
   return (
-    <div className="glass rounded-2xl p-6 sm:p-8">
+    <div className="glass rounded-[2px] p-6 sm:p-8">
       <p className="eyebrow mb-1.5">Finance This Home</p>
       <p className="mb-7 text-sm text-ink-dim">
         Indicative monthly repayment at today&apos;s typical bank rates.
@@ -83,11 +83,13 @@ export default function MortgageQuickCalc({ price }: MortgageQuickCalcProps) {
         </div>
       </div>
 
-      <div className="mt-8 rounded-xl border border-gold/25 bg-gold/[0.06] p-5">
+      <div className="mt-8 rounded-[2px] border border-gold/25 bg-gold/[0.06] p-5">
         <p className="text-[0.62rem] uppercase tracking-[0.25em] text-ink-dim">
           Estimated Monthly
         </p>
-        <p className="mt-1.5 font-display text-4xl text-gold">{sgd(result.monthly)}</p>
+        <p className="mt-1.5 font-sans text-3xl font-light tracking-tight text-gold">
+          {sgd(result.monthly)}
+        </p>
         <p className="mt-2 text-xs text-ink-faint">
           Downpayment {sgd(price - loan)} · Total interest {sgd(result.totalInterest)}
         </p>

@@ -74,7 +74,7 @@ export default function Hero() {
       {/* Cinematic backdrop */}
       <div className="absolute inset-0 animate-kenburns motion-reduce:animate-none">
         <Image
-          src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=2400&q=80"
+          src="/images/photo-1600596542815-ffad4c1539a9.jpg"
           alt="A luxury Singapore residence at dusk with an illuminated pool"
           fill
           priority

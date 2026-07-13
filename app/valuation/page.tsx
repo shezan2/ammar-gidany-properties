@@ -29,7 +29,7 @@ export default function ValuationPage() {
     <div className="relative overflow-hidden">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-[560px]">
         <Image
-          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2400&q=80"
+          src="/images/photo-1600585154340-be6161a56a0c.jpg"
           alt=""
           aria-hidden
           fill
@@ -76,7 +76,7 @@ export default function ValuationPage() {
 
             <Reveal delay={0.4} className="mt-12">
               <figure className="border-l-2 border-gold/50 pl-6">
-                <blockquote className="text-[0.95rem] italic leading-relaxed text-ink-dim">
+                <blockquote className="font-display text-xl italic leading-[1.5] text-ink-dim">
                   “Two agencies valued our Nassim apartment S$800K apart. Ammar&apos;s number sat
                   between them — and it was the one the market paid, seventeen days later.”
                 </blockquote>

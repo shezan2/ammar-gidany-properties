@@ -36,7 +36,7 @@ export default function AlertsSignup({ compact = false }: { compact?: boolean })
       <button
         type="submit"
         disabled={state === "sending"}
-        className="shrink-0 rounded-lg bg-gold px-5 text-[0.65rem] font-medium uppercase tracking-[0.18em] text-canvas transition-colors duration-300 hover:bg-gold-bright disabled:opacity-60"
+        className="shrink-0 rounded-[2px] bg-gold px-5 text-[0.65rem] font-medium uppercase tracking-[0.18em] text-canvas transition-colors duration-300 hover:bg-gold-bright disabled:opacity-60"
       >
         {state === "sending" ? "…" : "Notify Me"}
       </button>

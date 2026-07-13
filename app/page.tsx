@@ -7,7 +7,7 @@ import Marquee from "@/components/ui/Marquee";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
 import MagneticButton from "@/components/ui/MagneticButton";
-import PropertyCard from "@/components/PropertyCard";
+import PropertyShowcase from "@/components/PropertyShowcase";
 import { properties, recentlySold, testimonials, formatPriceShort } from "@/lib/properties";
 import { neighbourhoods } from "@/lib/neighbourhoods";
 import { stats } from "@/lib/site";
@@ -22,7 +22,7 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-7xl grid-cols-2 gap-y-10 px-5 py-14 sm:px-8 sm:py-16 lg:grid-cols-4">
           {stats.map((s, i) => (
             <Reveal key={s.label} delay={i * 0.1} className="flex flex-col items-center gap-2 text-center">
-              <span className="font-display text-4xl text-gold sm:text-5xl">
+              <span className="font-sans text-4xl font-light tracking-tight text-gold sm:text-5xl">
                 <CountUp
                   value={s.value}
                   prefix={"prefix" in s ? s.prefix : ""}
@@ -58,13 +58,7 @@ export default function HomePage() {
             </Button>
           </Reveal>
         </div>
-        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-          {properties.map((p, i) => (
-            <Reveal key={p.slug} delay={i * 0.12}>
-              <PropertyCard property={p} priority={i === 0} />
-            </Reveal>
-          ))}
-        </div>
+        <PropertyShowcase properties={[...properties]} />
       </section>
 
       {/* Recently sold */}
@@ -83,7 +77,7 @@ export default function HomePage() {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {recentlySold.map((s, i) => (
               <Reveal key={s.name} delay={(i % 3) * 0.1}>
-                <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-line">
+                <div className="group relative aspect-[4/3] overflow-hidden rounded-[2px] border border-line">
                   <Image
                     src={s.image.src}
                     alt={s.image.alt}
@@ -101,7 +95,7 @@ export default function HomePage() {
                     </p>
                     <p className="mt-1 font-display text-xl text-cream">{s.name}</p>
                     <div className="mt-2 flex items-center justify-between">
-                      <p className="font-display text-lg text-gold">
+                      <p className="font-sans text-base font-light tracking-[0.08em] text-gold">
                         {formatPriceShort(s.soldPrice)}
                       </p>
                       {s.overAsking && (
@@ -138,12 +132,12 @@ export default function HomePage() {
           {testimonials.map((t) => (
             <figure
               key={t.name}
-              className="w-[340px] shrink-0 rounded-2xl border border-line bg-surface p-7 sm:w-[420px]"
+              className="w-[340px] shrink-0 rounded-[2px] border border-line bg-surface p-7 sm:w-[420px]"
             >
               <svg viewBox="0 0 24 24" className="mb-4 h-6 w-6 fill-gold/60" aria-hidden>
                 <path d="M9.6 4C5.9 6.1 3.5 9.6 3.5 13.7c0 3.4 2 6.3 5.1 6.3 2.4 0 4.2-1.9 4.2-4.2 0-2.2-1.6-3.9-3.7-3.9-.4 0-.9.1-1 .1.3-2.3 2.4-5 4.6-6.2L9.6 4zm10.7 0c-3.7 2.1-6.1 5.6-6.1 9.7 0 3.4 2 6.3 5.1 6.3 2.4 0 4.2-1.9 4.2-4.2 0-2.2-1.6-3.9-3.7-3.9-.4 0-.9.1-1 .1.3-2.3 2.4-5 4.6-6.2L20.3 4z" />
               </svg>
-              <blockquote className="text-[0.92rem] leading-relaxed text-ink">
+              <blockquote className="font-display text-xl leading-[1.5] text-ink">
                 {t.quote}
               </blockquote>
               <figcaption className="mt-5 flex items-center gap-3">
@@ -186,7 +180,7 @@ export default function HomePage() {
               <Reveal key={n.slug} delay={i * 0.1}>
                 <Link
                   href={`/neighbourhoods/${n.slug}`}
-                  className="group relative block aspect-[3/4] overflow-hidden rounded-2xl border border-line sm:aspect-[4/5]"
+                  className="group relative block aspect-[3/4] overflow-hidden rounded-[2px] border border-line sm:aspect-[4/5]"
                 >
                   <Image
                     src={n.hero.src}
@@ -217,7 +211,7 @@ export default function HomePage() {
       <section className="relative overflow-hidden py-28 sm:py-36">
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=2400&q=80"
+            src="/images/photo-1600566753190-17f0baa2a6c3.jpg"
             alt=""
             aria-hidden
             fill

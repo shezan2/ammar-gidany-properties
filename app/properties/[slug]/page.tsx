@@ -110,7 +110,7 @@ export default async function PropertyDetailPage({ params }: PageProps) {
                   <p className="text-[0.6rem] uppercase tracking-[0.25em] text-ink-faint">
                     Guide Price
                   </p>
-                  <p className="font-display text-3xl text-gold sm:text-4xl">
+                  <p className="font-sans text-2xl font-light tracking-[0.04em] text-gold sm:text-3xl">
                     {formatPrice(p.price)}
                   </p>
                 </div>
@@ -156,7 +156,7 @@ export default async function PropertyDetailPage({ params }: PageProps) {
               {p.description.map((para) => (
                 <p
                   key={para.slice(0, 32)}
-                  className="mb-5 max-w-3xl text-base leading-[1.85] text-ink-dim sm:text-lg"
+                  className="mb-6 max-w-3xl font-display text-xl leading-[1.65] text-ink-dim sm:text-[1.35rem]"
                 >
                   {para}
                 </p>
@@ -233,7 +233,7 @@ export default async function PropertyDetailPage({ params }: PageProps) {
               <MortgageQuickCalc price={p.price} />
             </Reveal>
             <Reveal delay={0.15}>
-              <div className="glass rounded-2xl p-6 sm:p-8" id="enquire">
+              <div className="glass rounded-[2px] p-6 sm:p-8" id="enquire">
                 <p className="eyebrow mb-1.5">Private Viewing</p>
                 <p className="mb-6 text-sm leading-relaxed text-ink-dim">
                   Viewings are by appointment and always accompanied by Ammar personally.
